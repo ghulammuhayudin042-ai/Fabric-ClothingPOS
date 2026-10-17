@@ -1,0 +1,13 @@
+[build]
+  base = "/"
+  command = "npm run build"
+  publish = "client/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Single-page app: send unknown routes to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
